@@ -71,7 +71,7 @@ nav button span {
 }
 
 .navbar-collapse {
-    background-color: rgba(17, 43, 60, 0.8156862745);
+    background-color: rgba(17, 43, 60, 0.815686);
 }
 
 .nav-link {
@@ -93,14 +93,18 @@ ul .nav-item a {
     transition: background-size 0.3s;
 }
 
-.nav-item a:hover,
+.nav-item a:hover {
+    background-size: 100% 2px;
+    color: #f66b0e;
+}
+
 .nav-item a:focus {
     background-size: 100% 2px;
     color: #f66b0e;
 }
 
 .dropdown-menu {
-    background-color: rgba(17, 43, 60, 0.6980392157);
+    background-color: rgba(17, 43, 60, 0.698039);
     border-radius: 10px;
 }
 
@@ -136,10 +140,6 @@ footer .redes img {
     margin-top: 5px;
 }
 
-footer .redes-zoom:hover {
-    transform: scale(1.5);
-}
-
 footer .redes ul li {
     display: inline;
     margin-left: 10px;
@@ -149,8 +149,8 @@ footer .redes ul li a {
     text-decoration: unset;
 }
 
-footer.producto {
-    margin-top: 5vh !important;
+footer .redes-zoom:hover {
+    transform: scale(1.5);
 }
 
 footer .row {
@@ -162,35 +162,9 @@ footer .my-md-5 {
     margin-bottom: unset !important;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-    footer {
-        padding-left: 3vw;
-    }
+footer.producto {
+    margin-top: 5vh !important;
 }
-
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-    footer {
-        padding-left: 3vw;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    footer {
-        padding-left: 3vw;
-    }
-
-    footer .row {
-        margin-left: 2px;
-    }
-
-    footer .redes img {
-        width: 4.5vw;
-    }
-}
-
-/*FIN EDICIÓN DEL FOOTER*/
-
-/*COMIENZO EDICIÓN DE CONTACTO*/
 
 main .horarios {
     width: 13rem;
@@ -211,18 +185,6 @@ main .mapa {
     margin-top: 5%;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-    main .mapa {
-        margin-bottom: unset;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    main .mapa {
-        margin-bottom: unset;
-    }
-}
-
 main .mapa p {
     margin-bottom: 1%;
     margin-left: 2vw;
@@ -233,18 +195,6 @@ main .mapa iframe {
     height: 300px;
     width: 100%;
 }
-
-.informacion {
-    margin-left: 10vh;
-}
-
-.cuerpo {
-    background-color: yellowgreen;
-}
-
-/*FIN EDICIÓN DE CONTACTO*/
-
-/*COMIENZO EDICIÓN DE PS5*/
 
 main .card.contacto {
     background: linear-gradient(#4facfe, #00f2fe);
@@ -276,13 +226,53 @@ main .container-productos {
     padding-left: 15vw;
 }
 
+.informacion {
+    margin-left: 10vh;
+}
+
+.cuerpo {
+    background-color: yellowgreen;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    footer {
+        padding-left: 3vw;
+    }
+}
+
 @media only screen and (min-width: 600px) and (max-width: 768px) {
+    footer {
+        padding-left: 3vw;
+    }
+
+    main .mapa {
+        margin-bottom: unset;
+    }
+
     main .container-productos {
         padding-left: 6vw;
     }
 }
 
 @media only screen and (max-width: 600px) {
+    footer {
+        padding-left: 3vw;
+    }
+
+    footer .row {
+        margin-left: 2px;
+    }
+
+    footer .redes img {
+        width: 4.5vw;
+    }
+
+    main .mapa {
+        margin-bottom: unset;
+    }
+
+    /*FIN EDICIÓN DEL FOOTER*/
+
     main .container-productos {
         padding-left: 6vw;
     }
