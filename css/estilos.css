@@ -1,0 +1,301 @@
+/*COMIENZO EDICIÓN DEL HEADER*/
+.logo-png {
+    width: 80px;
+    margin-left: 40%;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: #112B3C;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    z-index: 10;
+}
+
+header .header-fixed {
+    height: 80px;
+    width: 100%;
+    background-color: #112B3C;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    z-index: 10;
+}
+
+header .header-fixed .header__logo {
+    height: 80px;
+    width: 20%;
+    margin-left: 10px;
+}
+
+header .carrito {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header .carrito i {
+    color: aliceblue;
+}
+
+#text {
+    margin-right: 20%;
+}
+
+.input-group-text {
+    height: 100%;
+}
+
+nav {
+    font-family: "Khula", sans-serif;
+    height: auto;
+    width: 70%;
+    background-color: #112B3C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav button span {
+    color: #efefef;
+    width: 100%;
+    font-size: 30px;
+}
+
+.navbar-collapse {
+    background-color: rgba(17, 43, 60, 0.8156862745);
+}
+
+.nav-link {
+    color: #efefef;
+    font-weight: bold;
+}
+
+ul .nav-item {
+    padding-left: 10px;
+    z-index: 100;
+}
+
+ul .nav-item a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+    background-size: 100% 2px;
+    color: #f66b0e;
+}
+
+.dropdown-menu {
+    background-color: rgba(17, 43, 60, 0.6980392157);
+    border-radius: 10px;
+}
+
+.dropdown-menu a {
+    color: #efefef;
+    font-size: 20px;
+    background-color: transparent !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: #205375 !important;
+    color: #f66b0e;
+}
+
+/*FIN EDICIÓN DEL HEADER*/
+
+/*COMIENZO EDICIÓN DEL FOOTER*/
+
+footer {
+    position: absolute;
+    width: 100%;
+    padding-left: 1vw;
+    background-color: #112B3C;
+    color: #c2c9cf;
+}
+
+footer .navbar-brand img {
+    width: 80px;
+}
+
+footer .redes img {
+    width: 2.5vw;
+    margin-top: 5px;
+}
+
+footer .redes-zoom:hover {
+    transform: scale(1.5);
+}
+
+footer .redes ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+footer .redes ul li a {
+    text-decoration: unset;
+}
+
+footer.producto {
+    margin-top: 5vh !important;
+}
+
+footer .row {
+    width: 100%;
+}
+
+footer .my-md-5 {
+    margin-top: unset !important;
+    margin-bottom: unset !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    footer {
+        padding-left: 3vw;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    footer {
+        padding-left: 3vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        padding-left: 3vw;
+    }
+
+    footer .row {
+        margin-left: 2px;
+    }
+
+    footer .redes img {
+        width: 4.5vw;
+    }
+}
+
+/*FIN EDICIÓN DEL FOOTER*/
+
+/*COMIENZO EDICIÓN DE CONTACTO*/
+
+main .horarios {
+    width: 13rem;
+    height: 7rem;
+    font-size: smaller;
+}
+
+main .threed:hover {
+    box-shadow: 1px 1px #53a7ea, 3px 3px #53a7ea, 4px 4px #53a7ea;
+    -webkit-transform: translateX(-3px);
+    transform: scale(1.1);
+    transition-duration: 1.5s;
+}
+
+main .mapa {
+    position: relative;
+    display: inline-relative;
+    margin-top: 5%;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    main .mapa {
+        margin-bottom: unset;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main .mapa {
+        margin-bottom: unset;
+    }
+}
+
+main .mapa p {
+    margin-bottom: 1%;
+    margin-left: 2vw;
+}
+
+main .mapa iframe {
+    border: 0;
+    height: 300px;
+    width: 100%;
+}
+
+.informacion {
+    margin-left: 10vh;
+}
+
+.cuerpo {
+    background-color: yellowgreen;
+}
+
+/*FIN EDICIÓN DE CONTACTO*/
+
+/*COMIENZO EDICIÓN DE PS5*/
+
+main .card.contacto {
+    background: linear-gradient(#4facfe, #00f2fe);
+    margin-left: 2vh;
+}
+
+main .card.contacto.contacto .form-control {
+    margin-bottom: 2vh;
+}
+
+main .card.producto {
+    width: 18rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+main .cuotas {
+    font-size: large;
+    font-weight: 500;
+    color: green;
+}
+
+main .precios {
+    color: blue;
+    font-weight: 500;
+}
+
+main .container-productos {
+    padding-left: 15vw;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    main .container-productos {
+        padding-left: 6vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main .container-productos {
+        padding-left: 6vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    main .container-productos {
+        padding-left: 6vw;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    main .container-productos {
+        padding-left: 10vw;
+    }
+}
