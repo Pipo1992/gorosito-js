@@ -1,73 +1,87 @@
-const producto1 = {
+// Creamos un array de objetos que contiene la información de los productos
+const productos = [
+  {
     id: '1',
     nombre: 'Play Station 4',
     precio: 135000,
-    stock: 1
-}
-
-const producto2 = {
+    stock: 1,
+  },
+  {
     id: '2',
     nombre: 'Play Station 5',
     precio: 315000,
-    stock: 5
-}
+    stock: 5,
+  },
+];
 
-let seguir = true;
+// Inicializamos las variables para el total y la cantidad de productos que se compran
 let total = 0;
 let cantidad = 0;
 
-while (seguir !== false) {
-    const productos = prompt(`Selecciona los productos 
-        1.${producto1.nombre} $ ${producto1.precio}
-        2.${producto2.nombre} $ ${producto2.precio}`);
+// Iniciamos un ciclo while que se ejecutará hasta que se ingrese 0
+while (true) {
+  // Pedimos al usuario que seleccione un producto y mostramos los detalles de los productos disponibles
+  const seleccion = prompt(
+    `Selecciona los productos:\n${productos.map(
+      (p) => `\n${p.id}. ${p.nombre} $ ${p.precio}`
+    )}\n0. Salir`
+  );
 
-    let productoSeleccionado;
+  // Validamos si se ingresó un número válido
+  const seleccionIndex = parseInt(seleccion);
+  if (
+    isNaN(seleccionIndex) ||
+    seleccionIndex < 0 ||
+    seleccionIndex > productos.length
+  ) {
+    alert('Selección inválida');
+    continue;
+  }
 
-    switch (productos) {
-        case '1':
-            alert(`Se agrego al carrito ${producto1.nombre}`);
-            productoSeleccionado = producto1;
-            break;
-        case '2':
-            alert(`Se agrego al carrito ${producto2.nombre}`);
-            productoSeleccionado = producto2;
-            break;
-        default:
-            alert('No existe el producto.')
-            break;
+  // Si se ingresó 0, salimos del ciclo
+  if (seleccionIndex === 0) break;
+
+  // Obtenemos el producto seleccionado por el usuario
+  const productoSeleccionado = productos[seleccionIndex - 1];
+
+  // Añadimos el producto seleccionado al carrito y mostramos un mensaje de confirmación
+  alert(`Se agregó al carrito ${productoSeleccionado.nombre}`);
+
+  // Inicializamos la variable cantidadQueLleva y validamos si se ingresó una cantidad válida
+  let cantidadQueLleva = 0;
+  while (true) {
+    const cantidadIngresada = prompt(
+      `Cuantos ${productoSeleccionado.nombre} queres llevar?`
+    );
+    cantidadQueLleva = parseInt(cantidadIngresada);
+
+    if (isNaN(cantidadQueLleva) || cantidadQueLleva < 1) {
+      alert('Cantidad inválida');
+      continue;
     }
 
-    if (productoSeleccionado !== undefined) {
-        let cantidadQueLleva = parseInt(prompt(`Cuantos ${productoSeleccionado.nombre} queres llevar?`));
-        if (puedeComprar(productoSeleccionado, cantidadQueLleva)) {
-            total += productoSeleccionado.precio * cantidadQueLleva;
-            cantidad += cantidadQueLleva;
-            stockRestante(productoSeleccionado, cantidadQueLleva);
-        }
-        else {
-            alert(`La cantidad de ${cantidadQueLleva} supera el stock de ${productoSeleccionado.stock}`);
-        }
+    // Validamos si la cantidad ingresada supera el stock del producto
+    if (cantidadQueLleva > productoSeleccionado.stock) {
+      alert(
+        `La cantidad de ${cantidadQueLleva} supera el stock de ${productoSeleccionado.stock}`
+      );
+      continue;
     }
 
-    if(prompt('Queres dejar de comprar? Presiona la tecla "N"') == 'N')
-        seguir = false;
+    // Si la cantidad es válida, salimos del ciclo
+    break;
+  }
+
+  // Añadimos el costo del producto y la cantidad comprada al total
+  total += productoSeleccionado.precio * cantidadQueLleva;
+  cantidad += cantidadQueLleva;
+
+  // Actualizamos el stock del producto seleccionado
+  productoSeleccionado.stock -= cantidadQueLleva;
+
+  // Mostramos el stock restante del producto seleccionado
+  alert(`El stock restante es de ${productoSeleccionado.stock}`);
 }
 
-alert(`La cantidad es de ${cantidad} y el total es de $ ${total}`)
-
-function stockRestante(producto, cantidad) {
-    let stockRestante = producto.stock - cantidad;
-    alert(`El stock restante es de ${stockRestante}`);
-}
-
-function puedeComprar(producto, cantidadQueLleva) {
-    if (cantidadQueLleva < 1) {
-        return false;
-    }
-    else if (cantidadQueLleva > producto.stock) {
-        return false;
-    }
-    else {
-        return true;
-    }
-}
+// Mostramos la cantidad de productos comprados y el total a pagar
+alert(`La cantidad es de ${cantidad} y el total es de $ ${total}`);
