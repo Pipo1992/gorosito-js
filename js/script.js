@@ -11,7 +11,7 @@ const productos = [
   {
     id: '2',
     nombre: 'Play Station 4 1tb',
-    precio: 13500,
+    precio: 135000,
     stock: 5,
     imagen: 'ps4 slim 1tb.jpg'
   },
