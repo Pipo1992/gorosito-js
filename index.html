@@ -43,6 +43,7 @@
                         <a class="nav-link" href="html/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
+                <span id="cantidad-en-carrito"></span>
                 <form class="d-flex">
                     <div class="form-group row">
                         <div class="col-2 carrito">
@@ -175,3 +176,9 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        actualizarCarrito();
+    });
+</script>

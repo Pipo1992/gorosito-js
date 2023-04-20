@@ -230,4 +230,4 @@ function comprar() {
   alert(`La cantidad es de ${carrito.cantidad} y el total es de $ ${carrito.total}`);
 }
 
-comprar();
+comprar(); 

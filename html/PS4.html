@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/estilos.css">
     <title>MKVideojuegos - PS4</title>
+    <script src="./../js/script.js"></script>
 </head>
 <body>
     <header>
@@ -42,6 +43,7 @@
                         <a class="nav-link" href="../html/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
+                <span id="cantidad-en-carrito"></span>
                 <form class="d-flex">
                     <div class="form-group row">
                         <div class="col-2 carrito">
@@ -72,93 +74,6 @@
         </div>
         <div class="container-productos">
             <div class="row">
-                <div class="card producto">
-                    <img src="../img/ps4 slim 500gb.jpg" class="card-img-top
-                        producto-zoom" alt="PS4">
-                    <div class="card-body">
-                        <p class="card-text">PS4 Slim 500GB</p>
-                        <div class="precios"> $ 112.500 <br> 12 x $ 9.375 </div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/ps4 slim 1tb.jpg" class="card-img-top
-                        producto-zoom" alt="PS4">
-                    <div class="card-body">
-                        <p class="card-text">PS4 Slim 1TB</p>
-                        <div class="precios"> $ 135.000 <br> 12 x $ 11.250 </div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/dualshock4.jpg" class="card-img-top
-                        producto-zoom" alt="dualshock4">
-                    <div class="card-body">
-                        <p class="card-text"> Dualshock 4</p>
-                        <div class="precios"> $ 27.000 <br> 12x $ 2.250</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/crash3.png" class="card-img-top
-                        producto-zoom" alt="CrashB3">
-                    <div class="card-body">
-                        <p class="card-text"> Crash Bandicoot N. Sane Trilogy</p>
-                        <div class="precios"> $ 11.250 <br> 12x $ 937.50</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/crash4.png" class="card-img-top
-                        producto-zoom" alt="CrashB4">
-                    <div class="card-body">
-                        <p class="card-text"> Crash Bandicoot 4 It's About Time</p>
-                        <div class="precios"> $ 18.000 <br> 12x $ 1.500</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/mafia.png" class="card-img-top
-                        producto-zoom" alt="Mafia">
-                    <div class="card-body">
-                        <p class="card-text"> Mafia Trilogy</p>
-                        <div class="precios"> $ 10.350 <br> 12x $ 862.50</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/MK11.png" class="card-img-top
-                        producto-zoom" alt="MK11">
-                    <div class="card-body">
-                        <p class="card-text"> Mortal Kombat 11</p>
-                        <div class="precios"> $ 9.000 <br> 12x $ 750</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/doom.png" class="card-img-top
-                        producto-zoom" alt="Doom">
-                    <div class="card-body">
-                        <p class="card-text"> Doom Eternal</p>
-                        <div class="precios"> $ 9.000 <br> 12x $ 750</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
             </div>
         </div>
         </div>
@@ -229,3 +144,10 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    generarProductos('ps4');
+    actualizarCarrito();
+});
+</script>

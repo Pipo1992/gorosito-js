@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/estilos.css">
     <title>MKVideojuegos - Ofertas</title>
+    <script src="./../js/script.js"></script>
 </head>
 <body>
     <header>
@@ -42,6 +43,7 @@
                         <a class="nav-link" href="../html/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
+                <span id="cantidad-en-carrito"></span>
                 <form class="d-flex">
                     <div class="form-group row">
                         <div class="col-2 carrito">
@@ -71,36 +73,8 @@
             <h2>Ofertas</h2>
             </div>
             <section>
-                <div class="container">
+                <div class="container ofertas">
                     <div class="row">
-                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                            <figure class="figure">
-                                <img src="../img/ps4 oferta.png"
-                                    class="w-100 shadow-1-strong figure-img img-fluid rounded mb-4 oferta-zoom"
-                                    alt="...">
-                            </figure>
-                        </div>
-                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                            <figure class="figure">
-                                <img src="../img/ps4 oferta2.png"
-                                    class="w-100 shadow-1-strong figure-img img-fluid rounded mb-4 oferta-zoom"
-                                    alt="...">
-                            </figure>
-                        </div>
-                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                            <figure class="figure">
-                                <img src="../img/ps5 oferta.png"
-                                    class="w-100 shadow-1-strong figure-img img-fluid rounded mb-4 oferta-zoom"
-                                    alt="...">
-                            </figure>
-                        </div>
-                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                            <figure class="figure">
-                                <img src="../img/vr oferta.png"
-                                    class="w-100 shadow-1-strong figure-img img-fluid rounded mb-4 oferta-zoom"
-                                    alt="...">
-                            </figure>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -172,3 +146,10 @@
 </body>
 
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        generarProductosOferta();
+        actualizarCarrito();
+    });
+</script>

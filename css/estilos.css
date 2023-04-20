@@ -200,3 +200,9 @@ main .container-productos {
 @media only screen and (min-width: 1600px) {
   main .container-productos {
     padding-left: 10vw; } }
+
+#cantidad-en-carrito{
+  color:white;
+  font-size: xx-large;
+  margin-right: 10px;
+}
