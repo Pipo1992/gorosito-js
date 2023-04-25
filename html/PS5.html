@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/estilos.css">
     <title>MKVideojuegos - PS5</title>
+    <script src="./../js/script.js"></script>
 </head>
 <body>
     <header>
@@ -42,6 +43,7 @@
                         <a class="nav-link" href="../html/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
+                <span id="cantidad-en-carrito"></span>
                 <form class="d-flex">
                     <div class="form-group row">
                         <div class="col-2 carrito">
@@ -72,93 +74,6 @@
         </div>
         <div class="container-productos">
             <div class="row">
-                <div class="card producto">
-                    <img src="../img/ps5 Normal.jpg" class="card-img-top
-                        producto-zoom" alt="PS5">
-                    <div class="card-body">
-                        <p class="card-text">PS5</p>
-                        <div class="precios"> $ 315.000 <br> 12 x $ 26.250 </div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/ps5 Digital.jpg" class="card-img-top
-                        producto-zoom" alt="PS5 Digital">
-                    <div class="card-body">
-                        <p class="card-text"> PS5 Digital</p>
-                        <div class="precios"> $ 270.000 <br> 12 x $ 22.500 </div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/dualsense ps5.jpg" class="card-img-top
-                        producto-zoom" alt="Dualsense">
-                    <div class="card-body">
-                        <p class="card-text"> Dualsense</p>
-                        <div class="precios"> $ 25.000 <br> 12x $ 2.083</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/vr ps5.png" class="card-img-top
-                        producto-zoom" alt="VR2">
-                    <div class="card-body">
-                        <p class="card-text">Playstation VR2</p>
-                        <div class="precios"> $ 250.000 <br> 12x $ 20.833</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/gta ps5.png" class="card-img-top
-                        producto-zoom" alt="GTA">
-                    <div class="card-body">
-                        <p class="card-text"> Grand Theft Auto V</p>
-                        <div class="precios"> $ 9.000 <br> 12x $ 750</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/sonic ps5.png" class="card-img-top
-                        producto-zoom" alt="Sonic">
-                    <div class="card-body">
-                        <p class="card-text"> Sonic Frontiers</p>
-                        <div class="precios"> $ 18.000 <br> 12x $ 1.500</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/final fantasy ps5.png" class="card-img-top
-                        producto-zoom" alt="Final Fantasy">
-                    <div class="card-body">
-                        <p class="card-text"> Final Fantasy VII</p>
-                        <div class="precios"> $ 18.000 <br> 12x $ 1.500</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
-                </div>
-                <div class="card producto">
-                    <img src="../img/gran turismo 7.png" class="card-img-top
-                        producto-zoom" alt="Gran Turismo">
-                    <div class="card-body">
-                        <p class="card-text"> Gran Turismo 7</p>
-                        <div class="precios"> $ 31.500 <br> 12x $ 2.625</div>
-                        <div class="cuotas"> CUOTAS SIN INTERÉS</div>
-                        <a class="btn btn-primary">Agregar al
-                            carrito</a>
-                    </div>
             </div>
         </div>
         </div>
@@ -229,3 +144,10 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        generarProductos('ps5');
+        actualizarCarrito();
+    });
+</script>
