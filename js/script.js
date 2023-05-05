@@ -183,101 +183,6 @@ const carrito = {
   cantidad: 0,
 };
 
-// mostrar los productos disponibles y obtener la selección del usuario
-function obtenerSeleccion(productos) {
-  return prompt(`Selecciona los productos:\n${productos.map(
-    ({ id, nombre, precio }) => `\n${id}. ${nombre} $ ${precio}`
-  )}\n0. Salir`);
-}
-
-// validar la seleccion del usuario
-function validarSeleccion(seleccion, productos) {
-  const seleccionIndex = parseInt(seleccion);
-  if (
-    isNaN(seleccionIndex) ||
-    seleccionIndex < 0 ||
-    seleccionIndex > productos.length
-  ) {
-    alert('Selección inválida');
-    return false;
-  }
-  return true;
-}
-
-// obtener la cantidad de productos que el usuario quiere comprar
-function obtenerCantidad(producto) {
-  let cantidadQueLleva = 0;
-  while (true) {
-    const cantidadIngresada = prompt(
-      `Cuantos ${producto.nombre} queres llevar?`
-    );
-    cantidadQueLleva = parseInt(cantidadIngresada);
-
-    if (isNaN(cantidadQueLleva) || cantidadQueLleva < 1) {
-      alert('Cantidad inválida');
-      continue;
-    }
-
-    // validamos si la cantidad ingresada supera el stock del producto
-    if (cantidadQueLleva > producto.stock) {
-      alert(
-        `La cantidad de ${cantidadQueLleva} supera el stock de ${producto.stock}`
-      );
-      continue;
-    }
-
-    // si la cantidad es valida, salimos del ciclo
-    break;
-  }
-  return cantidadQueLleva;
-}
-
-// agregar un producto al carrito
-function agregarAlCarrito(producto, cantidadQueLleva) {
-  alert(`Se agregó al carrito ${producto.nombre}`);
-  carrito.total += producto.precio * cantidadQueLleva;
-  carrito.cantidad += cantidadQueLleva;
-  producto.stock -= cantidadQueLleva;
-}
-
-// mostrar el stock restante del producto
-function mostrarStockRestante(producto) {
-  alert(`El stock restante es de ${producto.stock}`);
-}
-
-function comprar() {
-  while (true) {
-    // mostramos los productos disponibles y obtenemos la seleccion del usuario
-    const seleccion = obtenerSeleccion(productos);
-
-    // validamos la seleccion del usuario
-    if (!validarSeleccion(seleccion, productos)) {
-      continue;
-    }
-
-    // salimos del ciclo si el usuario selecciono salir
-    const seleccionIndex = parseInt(seleccion);
-    if (seleccionIndex === 0) {
-      break;
-    }
-
-    // obtenemos el producto seleccionado por el usuario
-    const productoSeleccionado = productos[seleccionIndex - 1];
-
-    // obtenemos la cantidad que el usuario quiere comprar
-    const cantidadQueLleva = obtenerCantidad(productoSeleccionado);
-
-    // agregamos el producto al carrito
-    agregarAlCarrito(productoSeleccionado, cantidadQueLleva);
-
-    // mostramos el stock restante del producto
-    mostrarStockRestante(productoSeleccionado);
-  }
-
-  // mostramos la cantidad y el total de la compra
-  alert(`La cantidad es de ${carrito.cantidad} y el total es de $ ${carrito.total}`);
-}
-
 function generarProductos(tipo)
 {
       //contenedor donde se van a agregar las cards de los productos
@@ -346,8 +251,7 @@ function agregarAlCarrito(id) {
   actualizarCarrito()
 }
 
-function actualizarCarrito()
-{
+function actualizarCarrito() {
   const carrito = localStorage.getItem('carrito');
   const cantidadProductosEnCarrito = carrito ? Object.values(JSON.parse(carrito)).reduce((a, b) => a + b) : 0;
   document.getElementById('cantidad-en-carrito').textContent = cantidadProductosEnCarrito;
