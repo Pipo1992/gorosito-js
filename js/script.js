@@ -83,7 +83,7 @@ const productos = [
     precio: 9000,
     stock: 3,
     imagen: 'doom.png',
-    tipo: 'ps5',
+    tipo: 'ps4',
     esOferta: false,
     cuotasSinInteres: true
   },
@@ -183,13 +183,24 @@ const carrito = {
   cantidad: 0,
 };
 
-function generarProductos(tipo)
+function generarProductos(tipo, ordenar)
 {
+      let productosFiltrados = [];
+      if(ordenar == 'asc') {
+        productosFiltrados = productos.sort((a,b) => (a.precio > b.precio) ? 1 : ((b.precio > a.precio) ? -1 : 0));
+      }
+      else if(ordenar == 'desc'){
+        productosFiltrados = productos.sort((a,b) => (a.precio < b.precio) ? 1 : ((b.precio < a.precio) ? -1 : 0));
+      }
+
       //contenedor donde se van a agregar las cards de los productos
       const contenedorProductos = document.querySelector('.container-productos .row');
 
+      //limpiar div por si hay algun elemento html adentro
+      contenedorProductos.innerHTML = '';
+
       //filtrar producto por tipo de play
-      const productosFiltrados = productos.filter(producto => producto.tipo === tipo);
+      productosFiltrados = productos.filter(producto => producto.tipo === tipo);
 
       // generar el HTML para cada producto y agregarlo al contenedor
       productosFiltrados.forEach(producto => {
