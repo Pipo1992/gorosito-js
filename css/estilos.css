@@ -29,6 +29,13 @@ header {
     header .carrito i {
       color: aliceblue; }
 
+.table-centered {
+  margin: 20px auto;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
 #text {
   margin-right: 20%; }
 
@@ -167,7 +174,7 @@ main .container-productos {
   margin-left: 10vh; }
 
 .cuerpo {
-  background-color: yellowgreen; }
+  background-color: grey; }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   footer {

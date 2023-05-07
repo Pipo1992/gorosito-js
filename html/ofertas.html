@@ -43,13 +43,15 @@
                         <a class="nav-link" href="../html/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
-                <span id="cantidad-en-carrito"></span>
+                <a href="../html/carrito.html" style="text-decoration: none; color: blue;"><span id="cantidad-en-carrito"></span></a>
                 <form class="d-flex">
                     <div class="form-group row">
                         <div class="col-2 carrito">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <i class="fa fa-shopping-cart fa-lg"></i>
+                                    <a href="../html/carrito.html">
+                                        <i class="fa fa-shopping-cart fa-lg"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -150,6 +152,6 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         generarProductosOferta();
-        actualizarCarrito();
+        actualizarCantidadCarrito();
     });
 </script>
