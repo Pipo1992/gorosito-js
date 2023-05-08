@@ -144,8 +144,9 @@
 </html>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    actualizarCantidadCarrito();
-    generarCarrito();
-});
+    window.onload = async function () {
+        await cargarProductosJson();
+        actualizarCantidadCarrito();
+        generarCarrito();
+    };
 </script>

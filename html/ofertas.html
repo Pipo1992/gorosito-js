@@ -150,8 +150,9 @@
 </html>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    window.onload = async function () {
+        await cargarProductosJson();
         generarProductosOferta();
         actualizarCantidadCarrito();
-    });
+    };
 </script>

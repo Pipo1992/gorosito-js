@@ -1,0 +1,178 @@
+[
+    {
+        "id": "1",
+        "nombre": "Play Station 4 500gb",
+        "precio": 112500,
+        "stock": 8,
+        "imagen": "ps4 slim 500gb.jpg",
+        "tipo": "ps4",
+        "cantidad": 0,
+        "esOferta": true,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "2",
+        "nombre": "Play Station 4 1tb",
+        "precio": 135000,
+        "stock": 5,
+        "imagen": "ps4 slim 1tb.jpg",
+        "tipo": "ps4",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": true
+    },
+    {
+        "id": "3",
+        "nombre": "Dualshock 4",
+        "precio": 27000,
+        "stock": 4,
+        "imagen": "dualshock4.jpg",
+        "tipo": "ps4",
+        "cantidad": 0,
+        "esOferta": true,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "4",
+        "nombre": "Crash Bandicoot N. Sane Trilogy",
+        "precio": 11250,
+        "stock": 3,
+        "imagen": "crash3.png",
+        "tipo": "ps4",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "5",
+        "nombre": "Crash Bandicoot 4",
+        "precio": 18000,
+        "stock": 2,
+        "imagen": "crash4.png",
+        "tipo": "ps4",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "6",
+        "nombre": "Mafia Trilogy",
+        "precio": 10350,
+        "stock": 3,
+        "imagen": "mafia.png",
+        "tipo": "ps4",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": true
+    },
+    {
+        "id": "7",
+        "nombre": "Mortal Kombat 11",
+        "precio": 9000,
+        "stock": 2,
+        "imagen": "MK11.png",
+        "tipo": "ps4",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "8",
+        "nombre": "Doom Eternal",
+        "precio": 9000,
+        "stock": 3,
+        "imagen": "doom.png",
+        "tipo": "ps4",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": true
+    },
+    {
+        "id": "9",
+        "nombre": "Play Station 5",
+        "precio": 315000,
+        "stock": 5,
+        "imagen": "ps5 normal.jpg",
+        "tipo": "ps5",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "10",
+        "nombre": "Play Station 5 Digital",
+        "precio": 270000,
+        "stock": 3,
+        "imagen": "ps5 digital.jpg",
+        "tipo": "ps5",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": true
+    },
+    {
+        "id": "11",
+        "nombre": "Dualsense",
+        "precio": 25000,
+        "stock": 6,
+        "imagen": "dualsense ps5.jpg",
+        "tipo": "ps5",
+        "cantidad": 0,
+        "esOferta": true,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "12",
+        "nombre": "Play Station VR2",
+        "precio": 250000,
+        "stock": 2,
+        "imagen": "vr ps5.png",
+        "tipo": "ps5",
+        "cantidad": 0,
+        "esOferta": true,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "13",
+        "nombre": "Grand Theft Auto V",
+        "precio": 9000,
+        "stock": 4,
+        "imagen": "gta ps5.png",
+        "tipo": "ps5",
+        "cantidad": 0,
+        "esOferta": true,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "14",
+        "nombre": "Sonic Frontiers",
+        "precio": 18000,
+        "stock": 7,
+        "imagen": "sonic ps5.png",
+        "tipo": "ps5",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "15",
+        "nombre": "Final Fantasy VII",
+        "precio": 18000,
+        "stock": 3,
+        "imagen": "final fantasy ps5.png",
+        "tipo": "ps5",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": false
+    },
+    {
+        "id": "16",
+        "nombre": "Gran Turismo 7",
+        "precio": 31500,
+        "stock": 5,
+        "imagen": "gran turismo 7.png",
+        "tipo": "ps5",
+        "cantidad": 0,
+        "esOferta": false,
+        "cuotasSinInteres": true
+    }
+]

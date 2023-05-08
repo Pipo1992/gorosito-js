@@ -143,10 +143,10 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
-
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    generarProductos('ps4');
-    actualizarCantidadCarrito();
-});
+    window.onload = async function () {
+        await cargarProductosJson();
+        generarProductos('ps4');
+        actualizarCantidadCarrito();
+    };
 </script>

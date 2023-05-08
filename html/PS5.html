@@ -146,10 +146,10 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
-
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    window.onload = async function () {
+        await cargarProductosJson();
         generarProductos('ps5');
         actualizarCantidadCarrito();
-    });
+    };
 </script>
